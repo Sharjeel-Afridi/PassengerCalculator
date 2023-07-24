@@ -1,21 +1,26 @@
 let count = 0
-let countEl = document.getElementById("count-el")
-let saveEl = document.getElementById("save-el")
+const countEl = document.getElementById("count-el")
+const saveEl = document.getElementById("save-el")
+const decrementEl = document.getElementById("decrement-btn")
+const incrementEl = document.getElementById("increment-btn")
+const saveBtn = document.getElementById("save-btn")
 
-function increment() {
+incrementEl.addEventListener("click",function increment() {
     count += 1
     countEl.innerText = count
     
-}
+} 
+)
 
-function decrement() {
+decrementEl.addEventListener("click", function decrement() {
     if (count > 0 ){
         count -= 1
     }
     countEl.innerText = count
 }
+)
 
-function save() {
+saveBtn.addEventListener("click", function save() {
     if (count > 0){
         let countStr = count + " - "
         saveEl.textContent += countStr
@@ -25,3 +30,5 @@ function save() {
         alert("Can not save 0");
     }
 }
+)
+

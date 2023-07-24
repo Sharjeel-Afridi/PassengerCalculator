@@ -42,7 +42,7 @@ button:active{
     background-color: #3e8e41;
     transform: scale(0.9);
 }
-#increment-btn{
+#increment-btn, #decrement-btn{
     background: #fc5656;
 }
 
